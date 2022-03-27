@@ -3,63 +3,54 @@ using System.Collections.Generic;
 
 namespace IplrDotnet
 {
+	// disables warning that field is never assigned to
 	#pragma warning disable 0649
-	class TeamJson
-	{
+
+	class TeamJson {
 		public int id;
 		public string fn, sn, abb, name, color;
 
-		public void print()
-		{
+		public void print() {
 			Console.WriteLine("Team: " + fn + " (" + abb + ")");
 		}
 	}
 
-	class GroundJson
-	{
+	class GroundJson {
 		public int id;
 		public string fn, sn, city, country, path;
 
-		public void print()
-		{
+		public void print() {
 			Console.WriteLine("Ground: " + fn + " (" + city + ")");
 		}
 	}
 
-	class PlayerJson
-	{
+	class PlayerJson {
 		public int id;
 		public string fn, sn, country, path;
 
-		public void print()
-		{
+		public void print() {
 			Console.WriteLine("Player: " + fn + " (" + country + ")");
 		}
 	}
 
-	class CodesJson
-	{
+	class CodesJson {
 		public List<TeamJson> teams;
 		public List<GroundJson> grounds;
 		public List<PlayerJson> players;
 
-		public void printTeams()
-		{
+		public void printTeams() {
 			foreach (var team in teams) team.print();
 		}
 
-		public void printGrounds()
-		{
+		public void printGrounds() {
 			foreach (var ground in grounds) ground.print();
 		}
 
-		public void printPlayers()
-		{
+		public void printPlayers() {
 			foreach (var player in players) player.print();
 		}
 
-		public void print()
-		{
+		public void print() {
 			Console.WriteLine("CodesJson object.");
 			Console.WriteLine("\t---- " + teams.Count + " teams");
 			Console.WriteLine("\t---- " + grounds.Count + " grounds");

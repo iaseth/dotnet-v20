@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace IplrDotnet
 {
+	// disables warning that field is never assigned to
+	#pragma warning disable 0649
+
 	class MatchJson {
 		//
 	}
