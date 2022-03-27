@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace iplr_dotnet
+namespace IplrDotnet
 {
 	#pragma warning disable 0649
 	class TeamJson
