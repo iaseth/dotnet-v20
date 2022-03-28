@@ -45,8 +45,7 @@ namespace V20 {
 		}
 
 		public void doStuff() {
-			// printTeams();
-			printPlayers();
+			printTeams();
 		}
 
 

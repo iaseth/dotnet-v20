@@ -16,7 +16,7 @@ namespace V20 {
 		}
 
 		public void print() {
-			Console.WriteLine("Ground: " + sn + " (" + city + ", " + country + ")");
+			Console.WriteLine($"Ground: {sn} ({city}, {country})");
 		}
 	}
 }

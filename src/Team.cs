@@ -6,7 +6,7 @@ namespace V20 {
 		TeamJson jo;
 
 		int id;
-		string fn, sn, abb, path;
+		string fn, sn, abb;
 
 		public Team(League league, TeamJson jo) {
 			this.league = league;
@@ -16,7 +16,7 @@ namespace V20 {
 		}
 
 		public void print() {
-			Console.WriteLine("Team: " + fn + " (" + abb + ")");
+			Console.WriteLine($"Team: {sn} ({abb})");
 		}
 	}
 }

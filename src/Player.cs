@@ -16,7 +16,7 @@ namespace V20 {
 		}
 
 		public void print() {
-			Console.WriteLine("Player: " + sn + " (" + country + ")");
+			Console.WriteLine($"Player: {sn} ({country})");
 		}
 	}
 }
