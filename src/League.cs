@@ -10,6 +10,9 @@ namespace V20 {
 		List<Ground> grounds;
 		List<Player> players;
 
+		List<Season> seasons;
+		List<Match> matches;
+
 		public League(CodesJson cj) {
 			this.cj = cj;
 			setupTeams(); setupGrounds(); setupPlayers();
@@ -42,10 +45,17 @@ namespace V20 {
 
 		public void loadBundle(BundleJson bj) {
 			this.bj = bj;
+			seasons = new List<Season>();
+			matches = new List<Match>();
+			foreach (SeasonJson jo in bj.seasons) {
+				Season s = new Season(this, jo);
+				seasons.Add(s);
+			}
 		}
 
+
 		public void doStuff() {
-			printTeams();
+			printSeasons();
 		}
 
 
@@ -64,6 +74,13 @@ namespace V20 {
 		public void printPlayers() {
 			foreach (Player player in players) {
 				player.print();
+			}
+		}
+
+
+		public void printSeasons() {
+			foreach (Season s in seasons) {
+				s.print();
 			}
 		}
 
