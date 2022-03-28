@@ -8,6 +8,7 @@ namespace V20 {
 
 		List<Team> teams;
 		List<Ground> grounds;
+		List<Player> players;
 
 		public League(CodesJson cj) {
 			this.cj = cj;
@@ -31,7 +32,11 @@ namespace V20 {
 		}
 
 		public void setupPlayers() {
-			//
+			players = new List<Player>();
+			foreach (PlayerJson jo in cj.players) {
+				Player player = new Player(this, jo);
+				players.Add(player);
+			}
 		}
 
 
@@ -41,7 +46,7 @@ namespace V20 {
 
 		public void doStuff() {
 			// printTeams();
-			printGrounds();
+			printPlayers();
 		}
 
 
@@ -54,6 +59,12 @@ namespace V20 {
 		public void printGrounds() {
 			foreach (Ground ground in grounds) {
 				ground.print();
+			}
+		}
+
+		public void printPlayers() {
+			foreach (Player player in players) {
+				player.print();
 			}
 		}
 
