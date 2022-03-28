@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RootNamespace>Dotnet.V20</RootNamespace>
+    <RootNamespace>V20</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
