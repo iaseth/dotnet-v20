@@ -3,7 +3,7 @@ using System.IO;
 
 using Newtonsoft.Json;
 
-namespace IplrDotnet
+namespace T20Dotnet
 {
 	class Program
 	{

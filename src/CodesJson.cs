@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace IplrDotnet
+namespace T20Dotnet
 {
 	// disables warning that field is never assigned to
 	#pragma warning disable 0649

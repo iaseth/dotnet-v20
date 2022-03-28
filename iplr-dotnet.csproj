@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RootNamespace>IplrDotnet</RootNamespace>
+    <RootNamespace>T20Dotnet</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
