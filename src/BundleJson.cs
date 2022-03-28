@@ -8,6 +8,10 @@ namespace IplrDotnet
 
 	class MatchJson {
 		//
+
+		public void print() {
+			Console.WriteLine("Match object {}");
+		}
 	}
 
 	class SeasonJson {
@@ -21,6 +25,10 @@ namespace IplrDotnet
 
 	class BundleJson {
 		public List<SeasonJson> seasons;
+
+		public void printFirstMatch() {
+			seasons[0].matches[0].print();
+		}
 
 		public void print() {
 			foreach (var season in seasons) {
