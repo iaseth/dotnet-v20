@@ -6,8 +6,31 @@ namespace IplrDotnet
 	// disables warning that field is never assigned to
 	#pragma warning disable 0649
 
+	class OverJson {
+		public int over;
+		public List<string> balls;
+	}
+
+	class WicketJson {
+		public int id, ball, over, r, w;
+	}
+
+	class ExtrasJson {
+		public int b, lb, nb, p, wd;
+	}
+
 	class TeamInningJson {
-		public int runs;
+		public int runs, balls;
+		public string overs;
+		public ExtrasJson extras;
+		public List<WicketJson> wickets;
+		public List<OverJson> history;
+
+		public void print() {
+			Console.WriteLine(runs + " (" + overs + ")");
+			Console.WriteLine(wickets.Count + " wickets.");
+			Console.WriteLine(history.Count + " overs.");
+		}
 	}
 
 	class SquadJson {
@@ -43,10 +66,11 @@ namespace IplrDotnet
 	class MatchJson {
 		public MatchMetaJson meta;
 		public List<SquadJson> teams;
+		public List<TeamInningJson> innings;
 
 		public void print() {
 			Console.WriteLine("Match object {}");
-			foreach (var sq in teams) sq.print();
+			foreach (var inning in innings) inning.print();
 		}
 	}
 
