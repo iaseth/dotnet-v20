@@ -6,6 +6,17 @@ namespace IplrDotnet
 	// disables warning that field is never assigned to
 	#pragma warning disable 0649
 
+	class DismissalJson {
+		public int bowler, ball, over;
+		public string type;
+		public List<int> fielders;
+	}
+
+	class BatsmanInningJson {
+		public int id, r, b, n4, n6;
+		// public DismissalJson out;
+	}
+
 	class BowlerInningJson {
 		public int id, d, m, r, w, nb, wd;
 	}
@@ -26,6 +37,7 @@ namespace IplrDotnet
 	class TeamInningJson {
 		public int runs, balls;
 		public string overs;
+		public List<BatsmanInningJson> batting;
 		public List<BowlerInningJson> bowling;
 		public ExtrasJson extras;
 		public List<WicketJson> wickets;
@@ -33,6 +45,7 @@ namespace IplrDotnet
 
 		public void print() {
 			Console.WriteLine(runs + " (" + overs + ")");
+			Console.WriteLine(batting.Count + " batsmen.");
 			Console.WriteLine(bowling.Count + " bowlers.");
 			Console.WriteLine(wickets.Count + " wickets.");
 			Console.WriteLine(history.Count + " overs.");
