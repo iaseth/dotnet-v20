@@ -1,10 +1,11 @@
 using System;
+using System.Collections.Generic;
 
 namespace V20 {
 	class Player {
 		League league;
 		PlayerJson jo;
-		int id;
+		public int id;
 		string fn, sn, path, country;
 
 		public Player (League league, PlayerJson jo) {
@@ -16,7 +17,13 @@ namespace V20 {
 		}
 
 		public void print () {
-			Console.WriteLine($"Player: {sn} ({country})");
+			Console.WriteLine($"Player #{id}: {fn} ({country})");
+		}
+	}
+
+	class PlayerComparer : IComparer<Player> {
+		public int Compare (Player p1, Player p2) {
+			return (p1.id - p2.id);
 		}
 	}
 }

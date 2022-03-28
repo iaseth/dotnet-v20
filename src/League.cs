@@ -40,6 +40,8 @@ namespace V20 {
 				Player player = new Player(this, jo);
 				players.Add(player);
 			}
+
+			players.Sort(new PlayerComparer());
 		}
 
 
@@ -57,6 +59,7 @@ namespace V20 {
 
 		public void doStuff () {
 			printSummary();
+			printPlayers();
 		}
 
 
