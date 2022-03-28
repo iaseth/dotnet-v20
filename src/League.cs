@@ -50,12 +50,13 @@ namespace V20 {
 			foreach (SeasonJson jo in bj.seasons) {
 				Season s = new Season(this, jo);
 				seasons.Add(s);
+				matches.AddRange(s.matches);
 			}
 		}
 
 
 		public void doStuff() {
-			printSeasons();
+			printSummary();
 		}
 
 
@@ -82,6 +83,17 @@ namespace V20 {
 			foreach (Season s in seasons) {
 				s.print();
 			}
+		}
+
+
+		public void printSummary() {
+			Console.WriteLine("League:");
+			Console.WriteLine($"\t---- {teams.Count} teams");
+			Console.WriteLine($"\t---- {grounds.Count} grounds");
+			Console.WriteLine($"\t---- {players.Count} players");
+			Console.WriteLine($"\t---- {seasons.Count} seasons");
+			Console.WriteLine($"\t---- {matches.Count} matches");
+			Console.WriteLine();
 		}
 
 
