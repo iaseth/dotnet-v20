@@ -7,7 +7,7 @@ namespace V20 {
 		int id;
 		string fn, sn, path, country;
 
-		public Player(League league, PlayerJson jo) {
+		public Player (League league, PlayerJson jo) {
 			this.league = league;
 			this.jo = jo;
 			id = jo.id;
@@ -15,7 +15,7 @@ namespace V20 {
 			path = jo.path; country = jo.country;
 		}
 
-		public void print() {
+		public void print () {
 			Console.WriteLine($"Player: {sn} ({country})");
 		}
 	}

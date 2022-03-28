@@ -8,14 +8,14 @@ namespace V20 {
 		int id;
 		string fn, sn, abb;
 
-		public Team(League league, TeamJson jo) {
+		public Team (League league, TeamJson jo) {
 			this.league = league;
 			this.jo = jo;
 			id = jo.id;
 			fn = jo.fn; sn = jo.sn; abb = jo.abb;
 		}
 
-		public void print() {
+		public void print () {
 			Console.WriteLine($"Team: {sn} ({abb})");
 		}
 	}

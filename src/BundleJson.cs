@@ -43,7 +43,7 @@ namespace V20
 		public List<WicketJson> wickets;
 		public List<OverJson> history;
 
-		public void print() {
+		public void print () {
 			Console.WriteLine(runs + " (" + overs + ")");
 			Console.WriteLine(batting.Count + " batsmen.");
 			Console.WriteLine(bowling.Count + " bowlers.");
@@ -57,7 +57,7 @@ namespace V20
 		public int team, captain, wk;
 		public List<int> players;
 
-		public void print() {
+		public void print () {
 			Console.WriteLine("Team: " + team);
 			Console.WriteLine(" Cap: " + captain);
 			Console.WriteLine("  Wk: " + wk);
@@ -73,7 +73,7 @@ namespace V20
 		public string outcome, state, year;
 		public List<int> order;
 
-		public void print() {
+		public void print () {
 			Console.WriteLine(" Ground: " + ground);
 			Console.WriteLine(" Number: " + number);
 			Console.WriteLine("  State: " + state);
@@ -88,7 +88,7 @@ namespace V20
 		public List<SquadJson> teams;
 		public List<TeamInningJson> innings;
 
-		public void print() {
+		public void print () {
 			Console.WriteLine("Match object {}");
 			foreach (var inning in innings) inning.print();
 		}
@@ -98,7 +98,7 @@ namespace V20
 		public string year;
 		public List<MatchJson> matches;
 
-		public void print() {
+		public void print () {
 			Console.WriteLine("Year " + year + " has " + matches.Count + " matches.");
 		}
 	}
@@ -106,11 +106,11 @@ namespace V20
 	class BundleJson {
 		public List<SeasonJson> seasons;
 
-		public void printFirstMatch() {
+		public void printFirstMatch () {
 			seasons[0].matches[0].print();
 		}
 
-		public void print() {
+		public void print () {
 			foreach (var season in seasons) {
 				season.print();
 			}

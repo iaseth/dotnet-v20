@@ -13,12 +13,12 @@ namespace V20 {
 		List<Season> seasons;
 		List<Match> matches;
 
-		public League(CodesJson cj) {
+		public League (CodesJson cj) {
 			this.cj = cj;
 			setupTeams(); setupGrounds(); setupPlayers();
 		}
 
-		public void setupTeams() {
+		public void setupTeams () {
 			teams = new List<Team>();
 			foreach (TeamJson jo in cj.teams) {
 				Team team = new Team(this, jo);
@@ -26,7 +26,7 @@ namespace V20 {
 			}
 		}
 
-		public void setupGrounds() {
+		public void setupGrounds () {
 			grounds = new List<Ground>();
 			foreach (GroundJson jo in cj.grounds) {
 				Ground ground = new Ground(this, jo);
@@ -34,7 +34,7 @@ namespace V20 {
 			}
 		}
 
-		public void setupPlayers() {
+		public void setupPlayers () {
 			players = new List<Player>();
 			foreach (PlayerJson jo in cj.players) {
 				Player player = new Player(this, jo);
@@ -43,7 +43,7 @@ namespace V20 {
 		}
 
 
-		public void loadBundle(BundleJson bj) {
+		public void loadBundle (BundleJson bj) {
 			this.bj = bj;
 			seasons = new List<Season>();
 			matches = new List<Match>();
@@ -55,38 +55,38 @@ namespace V20 {
 		}
 
 
-		public void doStuff() {
+		public void doStuff () {
 			printSummary();
 		}
 
 
-		public void printTeams() {
+		public void printTeams () {
 			foreach (Team team in teams) {
 				team.print();
 			}
 		}
 
-		public void printGrounds() {
+		public void printGrounds () {
 			foreach (Ground ground in grounds) {
 				ground.print();
 			}
 		}
 
-		public void printPlayers() {
+		public void printPlayers () {
 			foreach (Player player in players) {
 				player.print();
 			}
 		}
 
 
-		public void printSeasons() {
+		public void printSeasons () {
 			foreach (Season s in seasons) {
 				s.print();
 			}
 		}
 
 
-		public void printSummary() {
+		public void printSummary () {
 			Console.WriteLine("League:");
 			Console.WriteLine($"\t---- {teams.Count} teams");
 			Console.WriteLine($"\t---- {grounds.Count} grounds");
@@ -97,7 +97,7 @@ namespace V20 {
 		}
 
 
-		public void print() {
+		public void print () {
 			//
 		}
 	}

@@ -7,7 +7,7 @@ namespace V20 {
 		int id;
 		string fn, sn, path, city, country;
 
-		public Ground(League league, GroundJson jo) {
+		public Ground (League league, GroundJson jo) {
 			this.league = league;
 			this.jo = jo;
 			id = jo.id;
@@ -15,7 +15,7 @@ namespace V20 {
 			city = jo.city; country = jo.country;
 		}
 
-		public void print() {
+		public void print () {
 			Console.WriteLine($"Ground: {sn} ({city}, {country})");
 		}
 	}
