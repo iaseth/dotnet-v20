@@ -13,6 +13,16 @@ namespace IplrDotnet
 	class SquadJson {
 		public int team, captain, wk;
 		public List<int> players;
+
+		public void print() {
+			Console.WriteLine("Team: " + team);
+			Console.WriteLine(" Cap: " + captain);
+			Console.WriteLine("  Wk: " + wk);
+
+			Console.Write("Team: [ ");
+			foreach (int p in players) Console.Write(p + " ");
+			Console.WriteLine("]\n");
+		}
 	}
 
 	class MatchMetaJson {
@@ -36,7 +46,7 @@ namespace IplrDotnet
 
 		public void print() {
 			Console.WriteLine("Match object {}");
-			meta.print();
+			foreach (var sq in teams) sq.print();
 		}
 	}
 
